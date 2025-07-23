@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
@@ -574,6 +575,120 @@ const Index = () => {
               </div>
               <span className="text-lg font-semibold text-gray-900">4.9 из 5</span>
               <span className="text-gray-600">• 1,247 отзывов</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Часто задаваемые вопросы</h2>
+            <p className="text-xl text-gray-600">Ответы на самые популярные вопросы об аккредитации</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div className="relative">
+              <img 
+                src="/img/a327b9af-5287-47d3-a1f4-0f1ff13b8848.jpg" 
+                alt="Медицинская консультация" 
+                className="rounded-2xl shadow-lg w-full"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-medical-blue/10 rounded-lg flex items-center justify-center">
+                    <Icon name="HelpCircle" size={20} className="text-medical-blue" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">Консультации</p>
+                    <p className="text-sm text-gray-600">Бесплатно</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <Accordion type="single" collapsible className="space-y-4">
+                <AccordionItem value="item-1" className="border border-gray-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-gray-900">
+                      Если врач менял места трудовой деятельности за последние пять лет, как оформлять отчет?
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-gray-700">
+                    <div className="space-y-4">
+                      <p>Наши специалисты рекомендуют указать в отчете:</p>
+                      <ul className="space-y-2 list-disc list-inside ml-4">
+                        <li>название текущего места работы</li>
+                        <li>вашу должность на момент подачи отчета</li>
+                        <li>все трудовые функции, которые вы выполняли за последние пять лет, не обозначая при этом места работы</li>
+                      </ul>
+                      <p>Этот отчет должен подписать ваш руководитель. Он имеет право заверить только те функции, которые относятся к текущему месту работы. Если же он отказывается подписывать отчет, прикладывайте мотивированный отказ.</p>
+                      <p className="text-medical-blue font-medium">При смене работы запрашивайте сведения о функциях у мед. статистика, это поможет вам при написании отчета.</p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-2" className="border border-gray-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-gray-900">
+                      Врач работает на врачебной и руководящей должности одновременно, кто заверяет отчет?
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-gray-700">
+                    <p>Такой отчет отправляется без заверения. Будет плюсом, если добавить к нему документ о подтверждении руководящей должности.</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-3" className="border border-gray-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-gray-900">
+                      Где должны стоять подписи руководителя в отчете?
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-gray-700">
+                    <p>Подпись с расшифровкой и печать нужны на листе отчета о профессиональной деятельности.</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-4" className="border border-gray-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-gray-900">
+                      Можно ли подать на аккредитацию менее чем за полгода до конца действия сертификата?
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-gray-700">
+                    <p>Подавайте ваши документы не ранее чем за три месяца до истечения действия свидетельства. Если подавать раньше, ФАЦ пришлет отказ.</p>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="item-5" className="border border-gray-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left hover:no-underline py-6">
+                    <span className="font-semibold text-gray-900">
+                      Врач в декрете, нужно пройти аккредитацию, нужна ли подпись начальника в отчете?
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-6 text-gray-700">
+                    <p>Да. Ваш текущий работодатель в любом случае должен либо заверить отчет, либо вы должны приложить его мотивированный отказ.</p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-medical-blue/10 to-medical-green/10 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-medical-blue/20 rounded-lg flex items-center justify-center">
+                    <Icon name="MessageCircle" size={24} className="text-medical-blue" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">Не нашли ответ на свой вопрос?</h4>
+                    <p className="text-gray-600">Получите бесплатную консультацию наших специалистов</p>
+                  </div>
+                  <Button className="bg-medical-blue hover:bg-blue-600">
+                    Задать вопрос
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
