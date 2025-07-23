@@ -378,6 +378,207 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Reviews Section */}
+      <section className="py-20 bg-gradient-to-br from-medical-blue/5 to-medical-green/5">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Отзывы наших клиентов</h2>
+            <p className="text-xl text-gray-600">Более 2,800 медицинских специалистов доверили нам свою аккредитацию</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-medical-blue to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    ЕА
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Елена Андреева</h4>
+                    <p className="text-sm text-gray-600">Врач-терапевт, 8 лет стажа</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Благодаря МЕДИДУОТКА прошла аккредитацию без единой проблемы. Все документы подготовили за меня, 
+                  курсы были качественными и практичными. Особенно понравилось, что удостоверение привезли курьером прямо на работу!"
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Декабрь 2024
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-medical-green to-teal-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    МС
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Михаил Соколов</h4>
+                    <p className="text-sm text-gray-600">Врач-хирург, 15 лет стажа</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Как главврач рекомендую МЕДИДУОТКА всем коллегам. Помогли провести аккредитацию для 23 врачей нашей клиники. 
+                  Отчеты для Минздрава подготовили идеально, никаких замечаний от контролирующих органов не было."
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Ноябрь 2024
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    ТН
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Татьяна Никитина</h4>
+                    <p className="text-sm text-gray-600">Медсестра высшей категории</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Очень волновалась перед аккредитацией, но специалисты центра поддерживали на каждом этапе. 
+                  Курсы НМО были интересными, а главное - применимыми в работе. Результат - успешная аккредитация за 2 месяца!"
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Октябрь 2024
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    АК
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Александр Козлов</h4>
+                    <p className="text-sm text-gray-600">Врач-кардиолог, 12 лет стажа</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Переходил из частной клиники в государственную и нужна была срочная переподготовка. 
+                  МЕДИДУОТКА организовали всё за 3 недели! Документы в ФИС ФРДО внесли моментально, 
+                  теперь работаю кардиохирургом в областной больнице."
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Сентябрь 2024
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    ОВ
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Ольга Васильева</h4>
+                    <p className="text-sm text-gray-600">Врач-педиатр, 6 лет стажа</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Молодая мама, времени катастрофически не хватало на подготовку к аккредитации. 
+                  Центр взял на себя всю бумажную работу, а обучение проходила онлайн в удобное время. 
+                  Аккредитацию прошла с первого раза!"
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Август 2024
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                    ДР
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Дмитрий Романов</h4>
+                    <p className="text-sm text-gray-600">Врач-анестезиолог, 20 лет стажа</p>
+                  </div>
+                </div>
+                <div className="flex space-x-1 mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Icon key={i} name="Star" size={16} className="text-yellow-400 fill-current" />
+                  ))}
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700 italic">
+                  "Опытный врач, но технологии — не мой конек. Специалисты МЕДИДУОТКА помогли разобраться с ФРМР, 
+                  заполнили все заявления в электронном виде. Даже выписку с Госуслуг получили за меня. 
+                  Сервис на высшем уровне!"
+                </p>
+                <div className="flex items-center mt-4 text-sm text-gray-500">
+                  <Icon name="Calendar" size={14} className="mr-1" />
+                  Июль 2024
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full shadow-md">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Icon key={i} name="Star" size={20} className="text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <span className="text-lg font-semibold text-gray-900">4.9 из 5</span>
+              <span className="text-gray-600">• 1,247 отзывов</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Reports Dashboard */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
