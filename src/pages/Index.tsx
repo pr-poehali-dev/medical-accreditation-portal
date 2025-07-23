@@ -187,7 +187,7 @@ const Index = () => {
             <p className="text-xl text-gray-600">Полный цикл сопровождения медицинских специалистов</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-blue to-medical-green"></div>
               <CardHeader className="pb-4">
@@ -327,6 +327,42 @@ const Index = () => {
                   <div className="flex items-center text-sm text-gray-500">
                     <Icon name="Check" size={14} className="mr-2 text-medical-green" />
                     Контроль статуса заявки
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Icon name="Download" size={24} className="text-green-500" />
+                  </div>
+                  <div>
+                    <Badge className="bg-green-100 text-green-500 border-green-200 text-xs">
+                      Этап 5
+                    </Badge>
+                  </div>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Получение выписки</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Когда аккредитация пройдена, помогаем получить выписку о прохождении с Госуслуг.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Помощь в работе с Госуслугами
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Получение официальной выписки
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Доставка документов
                   </div>
                 </div>
               </CardContent>
