@@ -18,7 +18,15 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'Open Sans', 'system-ui', 'sans-serif'],
+			},
 			colors: {
+				medical: {
+					blue: '#2563EB',
+					green: '#059669',
+					gray: '#F8FAFC'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -84,6 +92,14 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				fadeIn: {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideUp: {
+					from: { opacity: '0', transform: 'translateY(30px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
