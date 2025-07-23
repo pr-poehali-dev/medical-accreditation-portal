@@ -6,10 +6,46 @@ import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { useEffect } from 'react';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState('accreditation');
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      id: 1,
+      title: "МЕДИДУОТКА — Ваш надежный партнер",
+      subtitle: "15 лет на рынке медицинского образования",
+      content: "Лицензированный образовательный центр с полным циклом подготовки медицинских специалистов. Более 2,800 успешно аккредитованных врачей и медсестер.",
+      image: "/img/8cc1248a-9e94-4292-9821-da3fa982d79d.jpg",
+      stats: "2,847 специалистов"
+    },
+    {
+      id: 2,
+      title: "Современные методы обучения",
+      subtitle: "Онлайн и офлайн форматы",
+      content: "Индивидуальный подход к каждому специалисту. Гибкий график, качественные материалы, опытные преподаватели-практики. Обучение без отрыва от работы.",
+      image: "/img/18be3f94-2a53-4d2b-be30-c45356a5c237.jpg",
+      stats: "97% успешной аккредитации"
+    },
+    {
+      id: 3,
+      title: "Полное сопровождение процесса",
+      subtitle: "От консультации до получения выписки",
+      content: "Берем на себя всю бумажную работу: подготовка документов, внесение данных в ФИС ФРДО, подача заявки в ФРМР, получение выписки с Госуслуг.",
+      image: "/img/cc3998c1-a988-48cc-b70e-862a0b5f4f58.jpg",
+      stats: "100% соответствие требованиям"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   const sections = [
     {
@@ -138,6 +174,117 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Academy Presentation */}
+      <section className="py-20 bg-gray-900 text-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Знакомство с академией МЕДИДУОТКА</h2>
+            <p className="text-xl text-gray-300">Презентация нашего образовательного центра</p>
+          </div>
+
+          <div className="relative max-w-6xl mx-auto">
+            <div className="relative h-96 md:h-[500px] bg-gradient-to-br from-medical-blue to-medical-green rounded-2xl overflow-hidden shadow-2xl">
+              {slides.map((slide, index) => (
+                <div
+                  key={slide.id}
+                  className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                    index === currentSlide ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
+                  }`}
+                >
+                  <div className="grid md:grid-cols-2 h-full">
+                    <div className="p-8 md:p-12 flex flex-col justify-center space-y-6">
+                      <div>
+                        <Badge className="bg-white/20 text-white border-white/30 mb-4">
+                          Слайд {index + 1} из {slides.length}
+                        </Badge>
+                        <h3 className="text-3xl md:text-4xl font-bold mb-2">{slide.title}</h3>
+                        <p className="text-xl text-white/80 mb-4">{slide.subtitle}</p>
+                      </div>
+                      <p className="text-lg text-white/90 leading-relaxed">{slide.content}</p>
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-2">
+                          <Icon name="Award" size={20} className="text-yellow-400" />
+                          <span className="font-semibold">{slide.stats}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="relative">
+                      <img 
+                        src={slide.image} 
+                        alt={slide.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent to-medical-blue/20"></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Slide Navigation */}
+            <div className="flex justify-center space-x-4 mt-8">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide 
+                      ? 'bg-white scale-125' 
+                      : 'bg-white/40 hover:bg-white/60'
+                  }`}
+                />
+              ))}
+            </div>
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <Icon name="ChevronLeft" size={24} className="text-white" />
+            </button>
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all duration-300"
+            >
+              <Icon name="ChevronRight" size={24} className="text-white" />
+            </button>
+          </div>
+
+          {/* Academy Stats */}
+          <div className="grid md:grid-cols-4 gap-6 mt-16">
+            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+              <div className="w-12 h-12 bg-medical-blue/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Users" size={24} className="text-white" />
+              </div>
+              <p className="text-3xl font-bold mb-2">2,847</p>
+              <p className="text-gray-300">Выпускников</p>
+            </div>
+            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+              <div className="w-12 h-12 bg-medical-green/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Calendar" size={24} className="text-white" />
+              </div>
+              <p className="text-3xl font-bold mb-2">15</p>
+              <p className="text-gray-300">Лет опыта</p>
+            </div>
+            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="BookOpen" size={24} className="text-white" />
+              </div>
+              <p className="text-3xl font-bold mb-2">152</p>
+              <p className="text-gray-300">Программы обучения</p>
+            </div>
+            <div className="text-center p-6 bg-white/10 rounded-xl backdrop-blur-sm">
+              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Icon name="Award" size={24} className="text-white" />
+              </div>
+              <p className="text-3xl font-bold mb-2">97%</p>
+              <p className="text-gray-300">Успешная аккредитация</p>
             </div>
           </div>
         </div>
