@@ -179,6 +179,133 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Что входит в нашу работу</h2>
+            <p className="text-xl text-gray-600">Полный цикл сопровождения медицинских специалистов</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-blue to-medical-green"></div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-medical-blue/10 rounded-lg flex items-center justify-center">
+                    <Icon name="MessageCircle" size={24} className="text-medical-blue" />
+                  </div>
+                  <div>
+                    <Badge className="bg-medical-blue/10 text-medical-blue border-medical-blue/20 text-xs">
+                      Этап 1
+                    </Badge>
+                  </div>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Консультация</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Проверим, какие документы на аккредитацию у вас есть. Если чего-то не достает, поможем получить.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Анализ имеющихся документов
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Составление плана аккредитации
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Помощь в получении недостающих справок
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-green to-medical-blue"></div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-medical-green/10 rounded-lg flex items-center justify-center">
+                    <Icon name="BookOpen" size={24} className="text-medical-green" />
+                  </div>
+                  <div>
+                    <Badge className="bg-medical-green/10 text-medical-green border-medical-green/20 text-xs">
+                      Этап 2
+                    </Badge>
+                  </div>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Обучение</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Прохождение специализированных курсов и программ повышения квалификации согласно требованиям аккредитации.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Индивидуальная программа обучения
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Онлайн и офлайн форматы
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Сертификаты установленного образца
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="relative overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-medical-blue to-orange-500"></div>
+              <CardHeader className="pb-4">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Icon name="Shield" size={24} className="text-orange-500" />
+                  </div>
+                  <div>
+                    <Badge className="bg-orange-100 text-orange-500 border-orange-200 text-xs">
+                      Этап 3
+                    </Badge>
+                  </div>
+                </div>
+                <CardTitle className="text-xl text-gray-900">Сопровождение</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Полное сопровождение процедуры аккредитации и подготовка всех необходимых отчетов для регулирующих органов.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Подготовка к аккредитационным испытаниям
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Формирование отчетной документации
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500">
+                    <Icon name="Check" size={14} className="mr-2 text-medical-green" />
+                    Поддержка после получения аккредитации
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-medical-blue hover:bg-blue-600">
+              <Icon name="CalendarCheck" size={16} className="mr-2" />
+              Записаться на консультацию
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Reports Dashboard */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
