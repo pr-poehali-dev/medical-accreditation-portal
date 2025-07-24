@@ -97,35 +97,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-medical-gray to-white">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-medical-blue to-medical-green rounded-xl flex items-center justify-center">
-                <Icon name="Heart" size={24} className="text-white" />
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">МЕДИДУОТКА</h1>
-                <p className="text-sm text-gray-600">Центр медицинского образования</p>
-              </div>
-            </div>
-            <nav className="flex items-center space-x-6">
-              <Button variant="ghost" className="text-gray-700 hover:text-medical-blue">
-                <Icon name="FileText" size={16} className="mr-2" />
-                Документы
-              </Button>
-              <Button variant="ghost" className="text-gray-700 hover:text-medical-blue">
-                <Icon name="Phone" size={16} className="mr-2" />
-                Контакты
-              </Button>
-              <Button className="bg-medical-blue hover:bg-blue-600">
-                Войти в личный кабинет
-              </Button>
-            </nav>
-          </div>
-        </div>
-      </header>
+
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-medical-blue/10 to-medical-green/10">
